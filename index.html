@@ -77,13 +77,23 @@ button:hover {
     </div>
 
 
-    <button onclick="showMessage()">Click Me</button>
+    <button onclick="toggleMessage()" id="btn">Click Me</button>
 
-<p id="message"></p>
+<p id="message" style="display:none;"></p>
 
 <script>
-function showMessage() {
-    document.getElementById("message").innerHTML = "Welcome to Prince Universe 🚀";
+function toggleMessage() {
+    let msg = document.getElementById("message");
+    let btn = document.getElementById("btn");
+
+    if (msg.style.display === "none") {
+        msg.style.display = "block";
+        msg.innerHTML = "Welcome to Prince Universe 🚀";
+        btn.innerHTML = "Hide";
+    } else {
+        msg.style.display = "none";
+        btn.innerHTML = "Click Me";
+    }
 }
 </script>
     
