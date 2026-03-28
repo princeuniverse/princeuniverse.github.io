@@ -33,6 +33,26 @@
             border-radius: 10px;
             box-shadow: 0 0 10px #00ffcc;
         }
+
+
+    
+        button {
+    background-color: transparent;
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #00ffcc;
+    color: black;
+    box-shadow: 0 0 15px #00ffcc;
+}
+        
     </style>
 
 </head>
@@ -56,5 +76,16 @@
         <p>To become a professional developer 🚀</p>
     </div>
 
+
+    <button onclick="showMessage()">Click Me</button>
+
+<p id="message"></p>
+
+<script>
+function showMessage() {
+    document.getElementById("message").innerHTML = "Welcome to Prince Universe 🚀";
+}
+</script>
+    
 </body>
 </html>
