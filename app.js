@@ -21,7 +21,7 @@ function loadScript(page) {
     if (old) old.remove();
 
     let script = document.createElement("script");
-    script.src = `js/${page}.js`;
+    script.src = `${page}.js`;
     script.id = "pageScript";
 
     document.body.appendChild(script);
