@@ -1,57 +1,41 @@
 <h2 class="page-title">Deposit Entry</h2>
 
-<div class="card">
+<div class="form-compact">
 
-    <div class="form-grid">
-
-        <div class="form-group">
-            <label>Account Number</label>
-            <input type="text" id="acc">
-        </div>
-
-        <div class="form-group">
-            <label>Customer Name</label>
-            <input type="text" id="name">
-        </div>
-
-        <div class="form-group">
-            <label>Contact Number</label>
-            <input type="text" id="contact">
-        </div>
-
-        <div class="form-group">
-            <label>Amount</label>
-            <input type="number" id="amount">
-        </div>
-
-        <div class="form-group full">
-            <label>Amount in Words</label>
-            <input type="text" id="words" readonly>
-        </div>
-
+    <div class="row">
+        <label>Account No</label>
+        <input type="text" id="acc">
     </div>
 
-    <!-- DENOMINATION BLOCK -->
-    <div class="section-title">Denomination Details</div>
-
-    <div class="card" style="padding:15px; background:#f9fafb;">
-        <p style="font-size:13px; color:#666;">
-            (Denomination calculator will go here)
-        </p>
+    <div class="row">
+        <label>Customer Name</label>
+        <input type="text" id="name">
     </div>
 
-    <!-- REMARKS -->
-    <div class="section-title">Remarks</div>
-
-    <div class="form-group">
-        <textarea rows="3"></textarea>
+    <div class="row">
+        <label>Contact</label>
+        <input type="text" id="contact">
     </div>
 
-    <!-- ACTIONS -->
+    <div class="row">
+        <label>Amount</label>
+        <input type="number" id="amount">
+    </div>
+
+    <div class="row">
+        <label>In Words</label>
+        <input type="text" id="words" readonly>
+    </div>
+
+    <div class="row">
+        <label>Remarks</label>
+        <input type="text">
+    </div>
+
     <div class="actions">
-        <button class="btn primary">Save</button>
-        <button class="btn secondary">Reset</button>
-        <button class="btn secondary">Print</button>
+        <button class="btn save">Save</button>
+        <button class="btn print">Print</button>
+        <button class="btn reset">Reset</button>
     </div>
 
 </div>
