@@ -26,3 +26,19 @@ function toggleDropdown(event) {
     }
 }
 
+
+
+function loadPageScript(page) {
+    let oldScript = document.getElementById("pageScript");
+    if (oldScript) oldScript.remove();
+
+    let script = document.createElement("script");
+    script.src = `js/${page}.js`;
+    script.id = "pageScript";
+
+    document.body.appendChild(script);
+}
+
+
+
+
