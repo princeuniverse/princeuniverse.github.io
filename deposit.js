@@ -1,8 +1,8 @@
-function convertToWords() {
-    let num = document.getElementById("amount").value;
-    document.getElementById("words").value = num + " rupees only";
-}
+document.getElementById("amount").addEventListener("input", function () {
+    let val = this.value;
+    document.getElementById("words").value = numberToWords(val);
+});
 
-function saveData() {
-    alert("Deposit Saved");
+function saveDeposit() {
+    alert("Deposit Saved (demo)");
 }
