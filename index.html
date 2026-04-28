@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard Layout</title>
+    <title>Pro Dashboard</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <div class="header">
-        <h2>My Website</h2>
-    </div>
+<!-- HEADER -->
+<div class="header">
+    <h2>My Dashboard</h2>
+    <div class="user">Prince</div>
+</div>
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <button onclick="loadPage('home')">Home</button>
-        <button onclick="loadPage('about')">About</button>
-        <button onclick="loadPage('contact')">Contact</button>
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="menu-item" onclick="loadPage('home')">
+        <i class="fas fa-home"></i> <span>Home</span>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div class="content" id="content">
-        <h1>Welcome</h1>
-        <p>Select a menu from left.</p>
+    <div class="menu-item" onclick="loadPage('analytics')">
+        <i class="fas fa-chart-line"></i> <span>Analytics</span>
     </div>
+    <div class="menu-item" onclick="loadPage('users')">
+        <i class="fas fa-users"></i> <span>Users</span>
+    </div>
+    <div class="menu-item" onclick="loadPage('settings')">
+        <i class="fas fa-cog"></i> <span>Settings</span>
+    </div>
+</div>
 
-    <script src="script.js"></script>
+<!-- CONTENT -->
+<div class="content" id="content">
+    <h1>Dashboard Overview</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Sales</h3>
+            <p>₹45,000</p>
+        </div>
+        <div class="card">
+            <h3>Users</h3>
+            <p>120</p>
+        </div>
+        <div class="card">
+            <h3>Orders</h3>
+            <p>75</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
