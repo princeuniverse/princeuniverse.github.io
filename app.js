@@ -47,4 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     loadPage("home"); // default page
-});
+ });
+
+script.src = `${page}.js`;
+
