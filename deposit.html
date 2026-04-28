@@ -27,10 +27,102 @@
         <input type="text" id="words" readonly>
     </div>
 
+    
+    
+    
+    <div class="section-title">Denomination</div>
+
+<div class="deno-compact">
+
+<table>
+    <tr>
+        <th>Note</th>
+        <th>In</th>
+        <th>Out</th>
+        <th>Total</th>
+    </tr>
+
+    <tr>
+        <td>500</td>
+        <td><input oninput="calcDeno()" data-val="500"></td>
+        <td><input oninput="calcDeno()" data-val="500"></td>
+        <td class="t">0</td>
+    </tr>
+
+    <tr>
+        <td>200</td>
+        <td><input oninput="calcDeno()" data-val="200"></td>
+        <td><input oninput="calcDeno()" data-val="200"></td>
+        <td class="t">0</td>
+    </tr>
+
+    <tr>
+        <td>100</td>
+        <td><input oninput="calcDeno()" data-val="100"></td>
+        <td><input oninput="calcDeno()" data-val="100"></td>
+        <td class="t">0</td>
+    </tr>
+
+    <tr>
+        <td>50</td>
+        <td><input oninput="calcDeno()" data-val="50"></td>
+        <td><input oninput="calcDeno()" data-val="50"></td>
+        <td class="t">0</td>
+    </tr>
+
+    <tr>
+        <td>20</td>
+        <td><input oninput="calcDeno()" data-val="20"></td>
+        <td><input oninput="calcDeno()" data-val="20"></td>
+        <td class="t">0</td>
+    </tr>
+
+    <tr>
+        <td>10</td>
+        <td><input oninput="calcDeno()" data-val="10"></td>
+        <td><input oninput="calcDeno()" data-val="10"></td>
+        <td class="t">0</td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td><input oninput="calcDeno()" data-val="5"></td>
+        <td><input oninput="calcDeno()" data-val="5"></td>
+        <td class="t">0</td>
+    </tr>
+
+    <tr>
+        <td>Coins</td>
+        <td><input oninput="calcDeno()" data-val="1"></td>
+        <td><input oninput="calcDeno()" data-val="1"></td>
+        <td class="t">0</td>
+    </tr>
+
+</table>
+
+<div class="deno-total">
+    Total: ₹ <span id="denoTotal">0</span>
+</div>
+
+</div>
+
+
+    
+    
+    
+    
+    
+    
     <div class="row">
         <label>Remarks</label>
         <input type="text">
     </div>
+
+
+
+
+
+    
 
     <div class="actions">
         <button class="btn save">Save</button>
@@ -38,4 +130,7 @@
         <button class="btn reset">Reset</button>
     </div>
 
+
+
+    
 </div>
