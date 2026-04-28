@@ -3,7 +3,8 @@ body { margin:0; font-family:Segoe UI; background:#ffffff; }
 .header {
     position: fixed;
     width:100%;
-    background:#ff7a00;
+    height:110px;
+    background:#cc5c00;
     padding:15px;
 }
 
