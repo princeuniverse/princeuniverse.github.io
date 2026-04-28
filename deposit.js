@@ -13,7 +13,7 @@ function calcDeno() {
     let total = 0;
 
     rows.forEach((row, i) => {
-        if (i === 0) return; // skip header
+        if (i === 0) return;
 
         let cells = row.querySelectorAll("td");
         if (cells.length < 4) return;
@@ -32,7 +32,6 @@ function calcDeno() {
 
     document.getElementById("denoTotal").innerText = total;
 
-    // sync amount
     let amountBox = document.getElementById("amount");
     if (amountBox) amountBox.value = total;
 }
