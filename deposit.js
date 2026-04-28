@@ -36,4 +36,3 @@ function calcDeno() {
     let amountBox = document.getElementById("amount");
     if (amountBox) amountBox.value = total;
 }
-}
