@@ -250,3 +250,50 @@ input[readonly] {
 ::-webkit-scrollbar-thumb {
     background: #bbb;
 }
+
+
+
+/* ========================
+  DENOMINATION
+======================== */
+
+.deno-compact {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.deno-compact table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.deno-compact th {
+    background: var(--maroon);
+    color: white;
+    padding: 5px;
+}
+
+.deno-compact td {
+    border: 1px solid var(--border);
+    padding: 4px;
+    text-align: center;
+}
+
+.deno-compact input {
+    width: 50px;
+    height: 24px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.deno-total {
+    margin-top: 8px;
+    font-weight: 600;
+    color: var(--maroon);
+}
+
+
+
+
