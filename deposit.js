@@ -1,8 +1,8 @@
 document.getElementById("amount").addEventListener("input", function () {
     let val = this.value;
-    document.getElementById("words").value = numberToWords(val);
+    document.getElementById("words").value = val + " rupees only";
 });
 
-function saveDeposit() {
-    alert("Deposit Saved (demo)");
+function resetForm() {
+    document.querySelectorAll(".form-card input").forEach(i => i.value = "");
 }
