@@ -2,7 +2,7 @@
 function loadPage(page, el) {
  
     document.getElementById("content").innerHTML = "Loading...";
-       fetch(`${page}.html`)
+       fetch(`pages${page}.html`)
         .then(res => res.text())
         .then(data => {
             document.getElementById("content").innerHTML = data;
@@ -20,7 +20,7 @@ function loadScript(page) {
     if (old) old.remove();
 
     let script = document.createElement("script");
-    script.src = `${page}.js`;
+    script.src = `js${page}.js`;
     script.id = "pageScript";
 
     document.body.appendChild(script);
