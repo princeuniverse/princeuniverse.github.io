@@ -1,34 +1,57 @@
-<h1 class="page-title">Deposit</h1>
+<h2 class="page-title">Deposit Entry</h2>
 
-<div class="form-card">
+<div class="card">
 
-    <div class="form-row">
+    <div class="form-grid">
+
         <div class="form-group">
-            <input type="text" id="acc" required>
             <label>Account Number</label>
+            <input type="text" id="acc">
         </div>
 
         <div class="form-group">
-            <input type="text" id="name" required>
             <label>Customer Name</label>
+            <input type="text" id="name">
         </div>
-    </div>
 
-    <div class="form-row">
         <div class="form-group">
-            <input type="number" id="amount" required>
+            <label>Contact Number</label>
+            <input type="text" id="contact">
+        </div>
+
+        <div class="form-group">
             <label>Amount</label>
+            <input type="number" id="amount">
         </div>
 
-        <div class="form-group">
-            <input type="text" id="words" readonly>
+        <div class="form-group full">
             <label>Amount in Words</label>
+            <input type="text" id="words" readonly>
         </div>
+
     </div>
 
-    <div class="form-actions">
-        <button class="btn primary" onclick="saveDeposit()">Save</button>
-        <button class="btn secondary" onclick="resetForm()">Reset</button>
+    <!-- DENOMINATION BLOCK -->
+    <div class="section-title">Denomination Details</div>
+
+    <div class="card" style="padding:15px; background:#f9fafb;">
+        <p style="font-size:13px; color:#666;">
+            (Denomination calculator will go here)
+        </p>
+    </div>
+
+    <!-- REMARKS -->
+    <div class="section-title">Remarks</div>
+
+    <div class="form-group">
+        <textarea rows="3"></textarea>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+        <button class="btn primary">Save</button>
+        <button class="btn secondary">Reset</button>
+        <button class="btn secondary">Print</button>
     </div>
 
 </div>
