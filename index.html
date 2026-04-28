@@ -15,20 +15,55 @@
     <div class="user">Prince</div>
 </div>
 
-<!-- SIDEBAR -->
+
+ <!-- Side Bar -->   
 <div class="sidebar">
+
     <div class="menu-item" onclick="loadPage('home')">
         <i class="fas fa-home"></i> <span>Home</span>
     </div>
-    <div class="menu-item" onclick="loadPage('analytics')">
-        <i class="fas fa-chart-line"></i> <span>Analytics</span>
+
+    <!-- TRANSACTIONS DROPDOWN -->
+    <div class="menu-item dropdown" onclick="toggleDropdown()">
+        <i class="fas fa-exchange-alt"></i>
+        <span>Transactions</span>
+        <i class="fas fa-chevron-down arrow"></i>
     </div>
-    <div class="menu-item" onclick="loadPage('users')">
-        <i class="fas fa-users"></i> <span>Users</span>
+
+    <div class="submenu" id="transactionMenu">
+        <div onclick="loadPage('deposit')">Deposit</div>
+        <div onclick="loadPage('withdrawal')">Withdrawal</div>
+        <div onclick="loadPage('transfer')">Fund Transfer</div>
     </div>
-    <div class="menu-item" onclick="loadPage('settings')">
-        <i class="fas fa-cog"></i> <span>Settings</span>
+
+    <div class="menu-item" onclick="loadPage('history')">
+        <i class="fas fa-history"></i> <span>Transaction History</span>
     </div>
+
+    <div class="menu-item" onclick="loadPage('ease')">
+        <i class="fas fa-bolt"></i> <span>Ease Service</span>
+    </div>
+
+    <div class="menu-item" onclick="loadPage('denomination')">
+        <i class="fas fa-coins"></i> <span>Denomination Manager</span>
+    </div>
+
+    <div class="menu-item" onclick="loadPage('account')">
+        <i class="fas fa-user-cog"></i> <span>Account Manager</span>
+    </div>
+
+    <div class="menu-item" onclick="loadPage('assets')">
+        <i class="fas fa-box"></i> <span>Assets</span>
+    </div>
+
+    <div class="menu-item" onclick="loadPage('income')">
+        <i class="fas fa-chart-pie"></i> <span>Income / Expense</span>
+    </div>
+
+    <div class="menu-item" onclick="loadPage('eod')">
+        <i class="fas fa-calendar-check"></i> <span>EOD</span>
+    </div>
+
 </div>
 
 <!-- CONTENT -->
