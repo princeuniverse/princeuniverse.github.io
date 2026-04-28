@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* HEADER */
+.header {
+    background: orange;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: orange;
+    padding-top: 20px;
+}
+
+/* SIDEBAR BUTTONS */
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: darkorange;
+}
+
+/* MAIN CONTENT */
+.content {
+    margin-top: 60px;
+    margin-left: 200px;
+    padding: 20px;
+    background: white;
+    height: 100vh;
+}
