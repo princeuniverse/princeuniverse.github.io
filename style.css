@@ -46,6 +46,36 @@ body {
     padding-left: 25px;
 }
 
+/* DROPDOWN */
+.submenu {
+    display: none;
+    background: #e66a00;
+}
+
+.submenu div {
+    padding: 10px 40px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.submenu div:hover {
+    background: #cc5c00;
+}
+
+/* ROTATE ARROW */
+.arrow {
+    margin-left: auto;
+    transition: 0.3s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+
+
 /* CONTENT */
 .content {
     margin-left: 220px;
@@ -88,3 +118,5 @@ h1 {
     font-weight: bold;
     color: #ff7a00;
 }
+
+
