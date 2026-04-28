@@ -1,156 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Prince Universe</title>
-
-
-    
-    <style>
-
-
-        
-     .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #020617;
-    border-bottom: 1px solid #00ffcc;
-}
-
-.logo {
-    color: #00ffff;
-    text-shadow: 0 0 10px #00ffff;
-}
-
-.nav-links a {
-    color: #00ffcc;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: white;
-    text-shadow: 0 0 10px #00ffcc;
-}
-
-
-        
-        body {
-            background-color: #0a0f1c;
-            color: #00ffcc;
-            font-family: Consolas, monospace;
-            text-align: center;
-        }
-
-        h1 {
-            color: #00ffff;
-            text-shadow: 0 0 10px #00ffff;
-        }
-
-        h2 {
-            color: #00ffcc;
-            margin-top: 30px;
-        }
-
-        p {
-            color: #cbd5e1;
-            font-size: 18px;
-        }
-
-        .box {
-            border: 1px solid #00ffcc;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #00ffcc;
-        }
-
-
-    
-        button {
-    background-color: transparent;
-    color: #00ffcc;
-    border: 2px solid #00ffcc;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #00ffcc;
-    color: black;
-    box-shadow: 0 0 15px #00ffcc;
-}
-        
-    </style>
-
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-
-
-
-    
 <body>
 
-  
-
-
-<div class="navbar">
-    <h2 class="logo">Prince Universe</h2>
-    
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-    </div>
-</div>
-
-    
-    
-
-    <h1>⚡ Prince Universe ⚡</h1>
-
-    <div class="box">
-        <h2>About Me</h2>
-        <p>Hello! I'm Prince Arya, learning web development.</p>
+    <!-- HEADER -->
+    <div class="header">
+        <h2>My Website</h2>
     </div>
 
-    <div class="box">
-        <h2>Skills</h2>
-        <p>HTML (Learning), Visual Basic</p>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <button onclick="loadPage('home')">Home</button>
+        <button onclick="loadPage('about')">About</button>
+        <button onclick="loadPage('contact')">Contact</button>
     </div>
 
-    <div class="box">
-        <h2>Goal</h2>
-        <p>To become a professional developer 🚀</p>
+    <!-- MAIN CONTENT -->
+    <div class="content" id="content">
+        <h1>Welcome</h1>
+        <p>Select a menu from left.</p>
     </div>
 
-
-    <button onclick="toggleMessage()" id="btn">Click Me</button>
-
-<p id="message" style="display:none;"></p>
-
-<script>
-function toggleMessage() {
-    let msg = document.getElementById("message");
-    let btn = document.getElementById("btn");
-
-    if (msg.style.display === "none") {
-        msg.style.display = "block";
-        msg.innerHTML = "Welcome to Prince Universe 🚀";
-        btn.innerHTML = "Hide";
-    } else {
-        msg.style.display = "none";
-        btn.innerHTML = "Click Me";
-    }
-}
-</script>
-    
+    <script src="script.js"></script>
 </body>
 </html>
