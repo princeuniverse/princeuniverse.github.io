@@ -1,7 +1,9 @@
 // LOAD PAGE
 function loadPage(page, el) {
-
-    fetch(`pages/${page}.html`)
+ 
+    document.getElementById("content").innerHTML = "Loading...";
+   
+    fetch(`${page}.html`)
         .then(res => res.text())
         .then(data => {
             document.getElementById("content").innerHTML = data;
