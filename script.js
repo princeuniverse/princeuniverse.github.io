@@ -1,6 +1,7 @@
 function loadPage(page) {
     let content = document.getElementById("content");
-
+ content.innerHTML = `<h1>${page.toUpperCase()}</h1><p>Content for ${page}</p>`;
+}
     if (page === "home") {
         content.innerHTML = `
             <h1>Dashboard Overview</h1>
@@ -24,3 +25,18 @@ function loadPage(page) {
         content.innerHTML = `<h1>Settings</h1><p>Settings panel...</p>`;
     }
 }
+
+
+function toggleDropdown() {
+    let menu = document.getElementById("transactionMenu");
+    let arrow = document.querySelector(".arrow");
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+        arrow.classList.remove("rotate");
+    } else {
+        menu.style.display = "block";
+        arrow.classList.add("rotate");
+    }
+}
+
