@@ -1,6 +1,6 @@
 document.getElementById("amount").addEventListener("input", function () {
     let val = this.value;
-    document.getElementById("words").value = val + " rupees only";
+   document.getElementById("amount").addEventListener("input", convertToWords);
 });
 
 function resetForm() {
