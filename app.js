@@ -2,8 +2,7 @@
 function loadPage(page, el) {
  
     document.getElementById("content").innerHTML = "Loading...";
-   
-    fetch(`${page}.html`)
+       fetch(`${page}.html`)
         .then(res => res.text())
         .then(data => {
             document.getElementById("content").innerHTML = data;
@@ -49,5 +48,5 @@ document.addEventListener("DOMContentLoaded", function () {
     loadPage("home"); // default page
  });
 
-script.src = `${page}.js`;
+
 
