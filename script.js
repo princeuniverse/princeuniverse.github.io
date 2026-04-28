@@ -13,7 +13,7 @@ function loadPage(page) {
         });
 }
 
-function toggleDropdown() {
+function toggleDropdown(event) {
     let menu = document.getElementById("transactionMenu");
     let arrow = document.querySelector(".arrow");
 
