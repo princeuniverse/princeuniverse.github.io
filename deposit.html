@@ -1,0 +1,22 @@
+<h1>Deposit Form</h1>
+
+<div class="form-box">
+
+    <label>Account Number</label>
+    <input type="text" id="acc">
+
+    <label>Customer Name</label>
+    <input type="text" id="name">
+
+    <label>Contact No.</label>
+    <input type="text" id="contact">
+
+    <label>Amount</label>
+    <input type="number" id="amount" oninput="convertToWords()">
+
+    <label>Amount in Words</label>
+    <input type="text" id="words" readonly>
+
+    <button onclick="saveData()">Save</button>
+
+</div>
