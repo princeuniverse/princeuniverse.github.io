@@ -1,7 +1,12 @@
-document.getElementById("amount").addEventListener("input", function () {
-    let val = this.value;
-   document.getElementById("amount").addEventListener("input", convertToWords);
-});
+setTimeout(() => {
+
+    let amountBox = document.getElementById("amount");
+
+    if (amountBox) {
+        amountBox.addEventListener("input", convertToWords);
+    }
+
+}, 100);
 
 function resetForm() {
     document.querySelectorAll(".form-card input").forEach(i => i.value = "");
