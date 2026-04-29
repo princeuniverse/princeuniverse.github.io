@@ -52,14 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         arrow.classList.toggle("rotate", !isOpen);
     });
 
-    // 🔥 CLOSE DROPDOWN WHEN CLICK OUTSIDE
-    document.addEventListener("click", function (e) {
-        if (!btn.contains(e.target) && !menu.contains(e.target)) {
-            menu.style.display = "none";
-            arrow.classList.remove("rotate");
-        }
-    });
-
 });
 
     document.getElementById("toggleSidebar").addEventListener("click", function () {
