@@ -18,14 +18,34 @@
 
 <div class="sidebar">
 
-    <div class="menu-item" onclick="loadPage('home', this)">Home</div>
+    <div class="menu-item" onclick="loadPage('home', this)">
+        <i class="fas fa-house"></i>
+        <span>Home</span>
+    </div>
 
-    <div class="menu-item" id="transactionBtn">Transactions ▼</div>
+    <div class="menu-item" id="transactionBtn">
+        <i class="fas fa-exchange-alt"></i>
+        <span>Transactions</span>
+        <i class="fas fa-chevron-down arrow"></i>
+    </div>
 
     <div class="submenu" id="transactionMenu">
-        <div onclick="loadPage('deposit', this)">Deposit</div>
-        <div onclick="loadPage('withdrawal', this)">Withdrawal</div>
-        <div onclick="loadPage('transfer', this)">Fund Transfer</div>
+
+        <div onclick="loadPage('deposit', this)">
+            <i class="fas fa-arrow-down"></i>
+            <span>Deposit</span>
+        </div>
+
+        <div onclick="loadPage('withdrawal', this)">
+            <i class="fas fa-arrow-up"></i>
+            <span>Withdrawal</span>
+        </div>
+
+        <div onclick="loadPage('transfer', this)">
+            <i class="fas fa-right-left"></i>
+            <span>Fund Transfer</span>
+        </div>
+
     </div>
 
 </div>
