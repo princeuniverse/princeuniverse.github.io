@@ -451,6 +451,10 @@ input[readonly] {
     margin-right: 0;
 }
 
+.sidebar.collapsed {
+    width: 70px;
+}
+
 /* hide text */
 .sidebar.collapsed span {
     display: none;
