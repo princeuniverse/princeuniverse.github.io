@@ -72,6 +72,5 @@ document.getElementById("toggleSidebar").addEventListener("click", function () {
 
 
     loadPage("home"); // default page
- });
 
 
