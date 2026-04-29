@@ -422,6 +422,8 @@ input[readonly] {
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
+    overflow: hidden; 
 }
 
 /* active state */
@@ -434,10 +436,11 @@ input[readonly] {
     content: "";
     position: absolute;
     left: 0;
-    top: 0;
-    height: 100%;
+    top: 5px;          /* small padding */
+    bottom: 5px;       /* instead of height */
     width: 4px;
     background: var(--yellow);
+    border-radius: 2px;
 }
 
 
