@@ -460,7 +460,25 @@ input[readonly] {
     background: var(--yellow);
 }
 
+/* collapsed sidebar */
+.sidebar.collapsed {
+    width: 70px;
+}
 
+/* hide text */
+.sidebar.collapsed span {
+    display: none;
+}
+
+/* center icons */
+.sidebar.collapsed i {
+    margin: auto;
+}
+
+/* content adjust */
+.content.collapsed {
+    margin-left: 70px;
+}
 
 
 
