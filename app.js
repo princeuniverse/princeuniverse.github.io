@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const menu = document.getElementById("transactionMenu");
     const arrow = btn.querySelector(".arrow");
 
-    btn.addEventListener("click", function () {
+    // TOGGLE DROPDOWN
+    btn.addEventListener("click", function (e) {
+        e.stopPropagation(); // prevent conflict
 
         let isOpen = menu.style.display === "block";
 
@@ -50,20 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
         arrow.classList.toggle("rotate", !isOpen);
     });
 
-    // 🔥 auto close when clicking other menu
-    document.querySelectorAll(".menu-item, .submenu div")
-        .forEach(item => {
-
-            item.addEventListener("click", function () {
-
-                if (this.id !== "transactionBtn") {
-                    menu.style.display = "none";
-                    arrow.classList.remove("rotate");
-                }
-
-            });
-
-        });
+    // 🔥 CLOSE DROPDOWN WHEN CLICK OUTSIDE
+    document.addEventListener("click", function (e) {
+        if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.style.display = "none";
+            arrow.classList.remove("rotate");
+        }
+    });
 
 });
 
