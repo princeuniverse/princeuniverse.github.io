@@ -416,3 +416,51 @@ input[readonly] {
 
 
 
+.menu-item,
+.submenu div {
+    position: relative;
+}
+
+/* active state */
+.active {
+    background: var(--maroon-dark);
+}
+
+/* LEFT BORDER */
+.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--yellow);
+}
+
+
+
+.menu-item,
+.submenu div {
+    position: relative;
+}
+
+/* active state */
+.active {
+    background: var(--maroon-dark);
+}
+
+/* LEFT BORDER */
+.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--yellow);
+}
+
+
+
+
+
