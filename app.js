@@ -47,11 +47,25 @@ document.addEventListener("DOMContentLoaded", function () {
         let isOpen = menu.style.display === "block";
 
         menu.style.display = isOpen ? "none" : "block";
-
-        // rotate arrow
         arrow.classList.toggle("rotate", !isOpen);
     });
 
+    // 🔥 auto close when clicking other menu
+    document.querySelectorAll(".menu-item, .submenu div")
+        .forEach(item => {
+
+            item.addEventListener("click", function () {
+
+                if (this.id !== "transactionBtn") {
+                    menu.style.display = "none";
+                    arrow.classList.remove("rotate");
+                }
+
+            });
+
+        });
+
+});
 
     loadPage("home"); // default page
  });
