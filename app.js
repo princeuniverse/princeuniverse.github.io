@@ -2,7 +2,7 @@
 function loadPage(page, el) {
  
     document.getElementById("content").innerHTML = "Loading...";
-       fetch(`pages/${page}.html`)
+       fetch(`form/${page}.html`)
         .then(res => res.text())
         .then(data => {
             document.getElementById("content").innerHTML = data;
