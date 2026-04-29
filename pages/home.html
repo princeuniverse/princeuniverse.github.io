@@ -1,0 +1,39 @@
+<h2 class="page-title">Dashboard</h2>
+
+<div class="dashboard">
+
+    <div class="card small">
+        <div class="card-title">Today's Transactions</div>
+        <div class="card-value" id="totalTxn">0</div>
+    </div>
+
+    <div class="card small">
+        <div class="card-title">Total Deposit</div>
+        <div class="card-value" id="totalDeposit">₹ 0</div>
+    </div>
+
+    <div class="card small">
+        <div class="card-title">Total Withdrawal</div>
+        <div class="card-value" id="totalWithdraw">₹ 0</div>
+    </div>
+
+</div>
+
+<div class="action-cards">
+
+    <div class="action-card" onclick="loadPage('deposit')">
+        <div class="icon">💰</div>
+        <div class="title">Deposit</div>
+    </div>
+
+    <div class="action-card" onclick="loadPage('withdrawal')">
+        <div class="icon">💸</div>
+        <div class="title">Withdrawal</div>
+    </div>
+
+    <div class="action-card" onclick="loadPage('history')">
+        <div class="icon">📄</div>
+        <div class="title">Transaction History</div>
+    </div>
+
+</div>
