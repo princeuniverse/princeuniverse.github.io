@@ -62,6 +62,10 @@ body {
     background: var(--maroon-dark);
 }
 
+.menu-item:hover i {
+    color: var(--yellow);
+}
+
 /* ACTIVE */
 .active {
     background: var(--maroon-dark);
