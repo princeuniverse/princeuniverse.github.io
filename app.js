@@ -35,18 +35,25 @@ function setActive(el) {
 }
 
 // DROPDOWN (Transactions)
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const btn = document.getElementById("transactionBtn");
     const menu = document.getElementById("transactionMenu");
+    const arrow = btn.querySelector(".arrow");
 
     btn.addEventListener("click", function () {
-        menu.style.display =
-            menu.style.display === "block" ? "none" : "block";
+
+        let isOpen = menu.style.display === "block";
+
+        menu.style.display = isOpen ? "none" : "block";
+
+        // rotate arrow
+        arrow.classList.toggle("rotate", !isOpen);
     });
+
 
     loadPage("home"); // default page
  });
-
 
 
