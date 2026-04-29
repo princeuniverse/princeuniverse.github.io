@@ -408,6 +408,7 @@ input[readonly] {
     transition: transform 0.3s ease;
 }
 
+
 /* rotated state */
 .arrow.rotate {
     transform: rotate(180deg);
@@ -419,6 +420,7 @@ input[readonly] {
 .menu-item,
 .submenu div {
     position: relative;
+    margin-left: auto;
 }
 
 /* active state */
@@ -438,31 +440,15 @@ input[readonly] {
 }
 
 
-
-.menu-item,
-.submenu div {
-    position: relative;
-}
-
-/* active state */
-.active {
-    background: var(--maroon-dark);
-}
-
-/* LEFT BORDER */
-.active::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 4px;
-    background: var(--yellow);
-}
 
 /* collapsed sidebar */
-.sidebar.collapsed {
-    width: 70px;
+.sidebar.collapsed .menu-item,
+.sidebar.collapsed .submenu div {
+    justify-content: center;
+}
+
+.sidebar.collapsed i {
+    margin-right: 0;
 }
 
 /* hide text */
