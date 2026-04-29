@@ -419,8 +419,9 @@ input[readonly] {
 
 .menu-item,
 .submenu div {
-    position: relative;
-    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* active state */
@@ -441,7 +442,6 @@ input[readonly] {
 
 
 
-/* collapsed sidebar */
 .sidebar.collapsed .menu-item,
 .sidebar.collapsed .submenu div {
     justify-content: center;
