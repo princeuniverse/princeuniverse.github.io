@@ -23,3 +23,9 @@ function numberToWords(num) {
 
     return convert(num).trim() + " Rupees Only";
 }
+
+
+const supabaseUrl = "https://kgmiodfxarvzpghukxta.supabase.co";
+const supabaseKey = "sb_publishable_veuyyZNzMDIPJK0Cja3f8g_5DllUCim";
+
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
