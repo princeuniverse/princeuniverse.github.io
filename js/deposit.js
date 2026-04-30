@@ -48,8 +48,8 @@ async function loadTable() {
     let table = document.querySelector("#depositTable tbody");
     table.innerHTML = "";
 
-    const { data, error } = await supabase
-        window.supabaseClient.from('TPD')
+    const { data, error } = await  window.supabaseClient
+       .from('TPD')
         .select('*')
         .order('id', { ascending: false });
 
@@ -98,8 +98,8 @@ async function saveDeposit() {
     let time = new Date().toLocaleTimeString();
 
     // INSERT INTO DB
-    const { data, error } = await supabase
-        window.supabaseClient.from('TPD')   // 🔥 table name (same as your screenshot)
+    const { data, error } = await  window.supabaseClient
+       .from('TPD')   // 🔥 table name (same as your screenshot)
         .insert([
             {
                 account_no: acc,
