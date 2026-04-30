@@ -44,4 +44,4 @@ if (!window._supabase) {
     window._supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 }
 
-
+console.log("Supabase lib:", window.supabase);
