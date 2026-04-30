@@ -42,14 +42,20 @@ function calcDeno() {
 }
 
 
-function loadTable() {
+async function loadTable() {
 
     let table = document.querySelector("#depositTable tbody");
     table.innerHTML = "";
 
-    let data = JSON.parse(localStorage.getItem("deposits")) || [];
+    const { data, error } = await supabase
+        .from('TPD')
+        .select('*')
+        .order('id', { ascending: false });
 
-    let today = new Date().toDateString();
+    if (error) {
+        console.error(error);
+        return;
+    }
 
     let sr = 1;
 
@@ -58,17 +64,16 @@ function loadTable() {
         let row = `
         <tr>
             <td>${sr++}</td>
-            <td>${d.acc}</td>
-            <td>${d.name}</td>
+            <td>${d.account_no}</td>
+            <td>${d.customer_name}</td>
             <td>₹ ${d.amount}</td>
-            <td>${d.time}</td>
+            <td>${d.posted_at}</td>
             <td style="color:green;">${d.status}</td>
         </tr>
         `;
 
         table.innerHTML += row;
     });
-
 }
 
 
