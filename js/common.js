@@ -1,6 +1,6 @@
 function convertToWords() {
-    let num = parseInt(document.getElementById("amount").value) || 0;
-    document.getElementById("words").value = numberToWords(num);
+    let amount = document.getElementById("amount").value || 0;
+    document.getElementById("words").value = numberToWords(amount);
 }
 
 function numberToWords(num) {
