@@ -35,13 +35,14 @@ window.numberToWords = function(num){
 
 
 
-// create only once
-if (!window._supabase) {
-
-   const supabaseUrl = "https://kgmiodfxarvzpghukxta.supabase.co";
-   const supabaseKey = "sb_publishable_veuyyZNzMDIPJK0Cja3f8g_5DllUCim";
-    
-    window._supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
-}
-
 console.log("Supabase lib:", window.supabase);
+
+if (window.supabase && !window.supabaseClient) {
+
+    const supabaseUrl = "https://kgmiodfxarvzpghukxta.supabase.co";
+    const supabaseKey = "sb_publishable_veuyyZNzMDIPJK0Cja3f8g_5DllUCim";
+
+    window.supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+    console.log("Client created:", window.supabaseClient);
+}
