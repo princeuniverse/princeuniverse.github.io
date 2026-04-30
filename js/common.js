@@ -25,7 +25,18 @@ function numberToWords(num) {
 }
 
 
-const supabaseUrl = "https://kgmiodfxarvzpghukxta.supabase.co";
-const supabaseKey = "sb_publishable_veuyyZNzMDIPJK0Cja3f8g_5DllUCim";
 
-const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+// create only once
+if (!window._supabase) {
+
+   const supabaseUrl = "https://kgmiodfxarvzpghukxta.supabase.co";
+   const supabaseKey = "sb_publishable_veuyyZNzMDIPJK0Cja3f8g_5DllUCim";
+    
+    window._supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+}
+
+// use global instance
+const supabase = window._supabase;
+
+
