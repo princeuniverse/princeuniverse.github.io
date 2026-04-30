@@ -7,9 +7,15 @@ function loadPage(page, el) {
         .then(data => {
             document.getElementById("content").innerHTML = data;
 
+         
             loadScript(page);
             setActive(el);
-        });
+
+         if (page === "deposit" && typeof initDepositPage === "function") {
+        setTimeout(() => initDepositPage(), 100);
+    }
+         
+  });
 
 }
 
