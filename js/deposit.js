@@ -49,7 +49,7 @@ async function loadTable() {
     table.innerHTML = "";
 
     const { data, error } = await supabase
-        .from('TPD')
+        window.supabaseClient.from('TPD')
         .select('*')
         .order('id', { ascending: false });
 
@@ -99,7 +99,7 @@ async function saveDeposit() {
 
     // INSERT INTO DB
     const { data, error } = await supabase
-        .from('TPD')   // 🔥 table name (same as your screenshot)
+        window.supabaseClient.from('TPD')   // 🔥 table name (same as your screenshot)
         .insert([
             {
                 account_no: acc,
