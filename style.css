@@ -473,6 +473,16 @@ input[readonly] {
     margin-left: 70px;
 }
 
+/* layout */
+.deposit-layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* left form */
+.left-panel {
+    width: 480px;
+}
 
 
 .right-panel {
