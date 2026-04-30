@@ -1,4 +1,4 @@
-function convertToWords() {
+window.convertToWords = function () {
 
     let amount = parseInt(document.getElementById("amount").value) || 0;
 
@@ -8,7 +8,7 @@ function convertToWords() {
     }
 
     document.getElementById("words").value = numberToWords(amount);
-}
+};
 
 
 function numberToWords(num) {
@@ -43,8 +43,5 @@ if (!window._supabase) {
     
     window._supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 }
-
-// use global instance
-const supabase = window._supabase;
 
 
