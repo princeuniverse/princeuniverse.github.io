@@ -475,3 +475,22 @@ input[readonly] {
 
 
 
+.right-panel {
+    flex: 1;
+}
+
+/* table scroll */
+#depositTable {
+    max-height: 400px;
+    overflow-y: auto;
+    display: block;
+}
+
+#depositTable thead {
+    position: sticky;
+    top: 0;
+}
+
+
+
+
