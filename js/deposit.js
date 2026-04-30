@@ -99,7 +99,7 @@ async function saveDeposit() {
 
     // INSERT INTO DB
     const { data, error } = await  window.supabaseClient
-       .from('TPD')   // 🔥 table name (same as your screenshot)
+       .from('TPD')
         .insert([
             {
                 account_no: acc,
