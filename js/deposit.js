@@ -1,5 +1,7 @@
 setTimeout(() => {
 
+    loadTable();
+    
     let amountBox = document.getElementById("amount");
 
     if (amountBox) {
@@ -36,5 +38,35 @@ function calcDeno() {
     });
 
     document.getElementById("denoTotal").innerText = total;
+
+}
+
+
+function loadTable() {
+
+    let table = document.querySelector("#depositTable tbody");
+    table.innerHTML = "";
+
+    let data = JSON.parse(localStorage.getItem("deposits")) || [];
+
+    let today = new Date().toDateString();
+
+    let sr = 1;
+
+    data.forEach(d => {
+
+        let row = `
+        <tr>
+            <td>${sr++}</td>
+            <td>${d.acc}</td>
+            <td>${d.name}</td>
+            <td>₹ ${d.amount}</td>
+            <td>${d.time}</td>
+            <td style="color:green;">${d.status}</td>
+        </tr>
+        `;
+
+        table.innerHTML += row;
+    });
 
 }
