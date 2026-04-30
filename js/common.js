@@ -1,7 +1,15 @@
 function convertToWords() {
-    let amount = document.getElementById("amount").value || 0;
+
+    let amount = parseInt(document.getElementById("amount").value) || 0;
+
+    if (!amount) {
+        document.getElementById("words").value = "";
+        return;
+    }
+
     document.getElementById("words").value = numberToWords(amount);
 }
+
 
 function numberToWords(num) {
     if (num === 0) return "Zero Rupees Only";
