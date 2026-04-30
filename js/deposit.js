@@ -1,17 +1,14 @@
-setTimeout(() => {
-
+function initDepositPage() {
     loadTable();
-    
-    let amountBox = document.getElementById("amount");
 
+    let amountBox = document.getElementById("amount");
     if (amountBox) {
         amountBox.addEventListener("input", convertToWords);
     }
-
-}, 100);
+}
 
 function resetForm() {
-    document.querySelectorAll(".form-card input").forEach(i => i.value = "");
+    document.querySelectorAll(".form-compact input").forEach(i => i.value = "");
 }
 
 
