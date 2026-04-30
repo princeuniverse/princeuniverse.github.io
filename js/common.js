@@ -11,7 +11,7 @@ window.convertToWords = function () {
 };
 
 
-function numberToWords(num) {
+window.numberToWords = function(num){
     if (num === 0) return "Zero Rupees Only";
 
     let a = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
