@@ -70,3 +70,57 @@ function loadTable() {
     });
 
 }
+
+
+
+
+async function saveDeposit() {
+
+    // GET VALUES
+    let acc = document.getElementById("acc").value.trim();
+    let name = document.getElementById("name").value.trim();
+    let contact = document.getElementById("contact").value.trim();
+    let amount = document.getElementById("amount").value.trim();
+
+    // BASIC VALIDATION
+    if (!acc || !name || !amount) {
+        alert("Fill required fields");
+        return;
+    }
+
+    // TIME
+    let time = new Date().toLocaleTimeString();
+
+    // INSERT INTO DB
+    const { data, error } = await supabase
+        .from('TPD')   // 🔥 table name (same as your screenshot)
+        .insert([
+            {
+                account_no: acc,
+                customer_name: name,
+                contact_no: contact,
+                amount: amount,
+                status: "Success",
+                posted_at: time
+            }
+        ]);
+
+    if (error) {
+        console.error(error);
+        alert("❌ Save failed");
+        return;
+    }
+
+    alert("✅ Saved successfully");
+
+    // RESET FORM (optional)
+    document.querySelectorAll(".form-compact input").forEach(i => i.value = "");
+
+    // RELOAD TABLE
+    loadTable();
+}
+
+
+
+
+
