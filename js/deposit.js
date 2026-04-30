@@ -1,10 +1,14 @@
 function initDepositPage() {
+
     loadTable();
 
-    let amountBox = document.getElementById("amount");
-    if (amountBox) {
-        amountBox.addEventListener("input", convertToWords);
-    }
+    setTimeout(() => {
+        let amountBox = document.getElementById("amount");
+
+        if (amountBox) {
+            amountBox.addEventListener("input", convertToWords);
+        }
+    }, 200);
 }
 
 function resetForm() {
